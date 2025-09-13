@@ -1,1 +1,2 @@
 date,scenario,vus,duration_s,p95_ms,error_rate,notes
+2025-09-13,orders baseline (local),30,60,6.69ms,0.00%,max=99.02ms
