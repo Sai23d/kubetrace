@@ -1,0 +1,12 @@
+1. Ensure your Docker image exists locally:
+   docker compose build orders
+
+2. Load it into the 'kubetrace' kind cluster:
+   kind load docker-image kubetrace_starter-orders:latest --name kubetrace
+
+3. Install the chart in namespace 'kubetrace':
+   helm install orders ./charts/orders -n kubetrace --create-namespace
+
+4. Port-forward and test:
+   kubectl -n kubetrace port-forward svc/orders 8001:8000
+   curl http://localhost:8001/healthz

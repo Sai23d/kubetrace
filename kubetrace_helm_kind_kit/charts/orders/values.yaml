@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  repository: kubetrace_starter-orders
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "64Mi"
+  limits:
+    cpu: "250m"
+    memory: "256Mi"
+
+probes:
+  path: /healthz
+  initialDelaySeconds: 3
+  periodSeconds: 5
+  timeoutSeconds: 1
+  failureThreshold: 3
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
