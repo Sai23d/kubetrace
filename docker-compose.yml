@@ -1,0 +1,15 @@
+# docker-compose.yml  (note: no "version" key needed for Compose v2)
+services:
+  orders:
+    build:
+      context: .
+      dockerfile: services/orders/Dockerfile
+    ports:
+      - "8001:8000"
+
+  payments:
+    build:
+      context: .
+      dockerfile: services/payments/Dockerfile
+    ports:
+      - "8002:8000"
