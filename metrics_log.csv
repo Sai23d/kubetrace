@@ -1,3 +1,4 @@
 date,scenario,vus,duration_s,p95_ms,error_rate,notes
 2025-09-13,orders baseline (local),30,60,6.69ms,0.00%,max=99.02ms
 2025-09-13,orders on kind (probes),30,60,5.62ms,0.00%,kind k8s; max=782.14ms
+2025-09-14,orders on k8s (Prom wired),30,60,95.0ms,0.00%,kind k8s + Prom
